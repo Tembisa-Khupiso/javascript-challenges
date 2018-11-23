@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2Hearts Hospital</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+    <link rel="stylesheet" type="text/css" href="css/form.css"> 
+</head>
+    <body>
+        <div class="header">
+            <span class="logo"><img src="img/logo2.png" alt="2Hearts Logo"></span>
+            <span class="menu">
+                <ul>
+                <a href="challenges.html"><li>Home</li></a>
+                <a href="bd_appo.html"><li>Business Days Appointments</li></a>
+                <a href="wknd_appo.html"><li>Weekends Appointments</li></a>
+                <a href="#contact"><li>Contact Us</li></a>
+            </ul>
+            </span>
+        </div>
+        <div class="container">
+        <h1>GENERATE YOUR SEAT NUMBER</h1>
+        <h2>Please enter 3 numbers to get your seat number</h2><br /><br />
+        <p id="output"></p><br />
+        <form id="form1" action="challenges.html">
+            <input id="password1" name="password1" placeholder="0" type="text">
+            <input id="password2" name="password2" placeholder="1" type="number">
+            <input id="password3" name="password3" placeholder="2" type="number">
+        </form>
+        <br /><button name="submit" onclick="area()">Generate</button>
+        </div><br /><br />
+        <hr>
+        <div class="footer">
+                <h3>Contact Form</h3>
+
+                <div class="container1">
+                  <form action="/wknd_appo.html">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                      <option value="rsa">RSA</option>
+                    </select>
+                
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                
+                    <input type="submit" value="Submit">
+                  </form><script>
+                        function area() {
+                            var num1 = Number(document.getElementById('password1').value);
+                            var num2 = Number(document.getElementById('password2').value);
+                            var num3 = Number(document.getElementById('password3').value);
+                            area = ((1/2)*(num1+num2+num3));
+                            document.getElementById("output").innerHTML = area;
+                            }
+                            
+                     </script>
+                </div><br />  
+                <p>Written and coded by <a href="https://tembisakupiso" target="_blank">Tembisa Khupiso.</a></p>             
+        </div>
+    
+    </body>
+</html>

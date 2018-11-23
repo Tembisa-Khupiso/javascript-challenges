@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <link type="text" href="css/styles.css">
+<body>
+     <div class="container">       
+    <p>Challenge Number 1, I had to solve("coDe") = "code". Lowercase characters > uppercase. Change only the "D" to lowercase</p>         
+      <button onclick="myFunction1()">Changed from "coDe" to</button>
+      <p id="demo1"></p>
+                
+    <p>Challenge Number 2, I had to solve("CODe") = "CODE". Uppercase characters > lowecase. Change only the "e" to uppercase.</p>         
+      <button onclick="myFunction2()">Changed from "CODe" to </button>
+      <p id="demo2"></p>
+
+    <p>Challenge Number 3, I had to solve("coDE") = "code". Upper == lowercase. Change all to lowercase.</p>
+      <button onclick="myFunction3()">Changed from "coDE" to </button>
+      <p id="demo3"></p>  
+                
+        <script>
+          function myFunction1() {
+            var str = "coDe";
+            var i = 0;
+            var res;
+            while(i <= str.length){ //a while terminated when string end is reached
+            if(str[i] === 'D'){ //comparing the character array with 'D'
+               res = str[i].toLowerCase();//printing the value which enters the condition    
+            }
+            ++i;//incrementing our index
+          }
+            document.getElementById("demo1").innerHTML = "co"+res+"e";//printing the word with the changes
+            }
+</script>
+<script>
+         function myFunction2() {
+            var str = "CODe";
+            var res = str.toUpperCase();//The tolowerCase method converts a string to lowercase letters
+            document.getElementById("demo2").innerHTML = res;
+        
+            }
+          </script>
+<script>
+             function myFunction3() {
+            var str = "coDE";
+            var res = str.toLowerCase();//The toupperCase method converts a string to lowercase letters
+            document.getElementById("demo3").innerHTML = res;
+            
+            }
+        </script>
+
+<script>
+  function calculate(){
+  var x = document.getElementById('firstNumber').value;
+  var y = document.getElementById('secondNumber').value;
+  var sum = parseFloat(x) + parseFloat(y);
+  
+  if(x == 50 || y == 50 || sum == 50){
+  document.getElementById('demo').innerHTML = true;
+  } else {
+  document.getElementById('demo').innerHTML = false;
+  }
+  }
+  </script>
+     </div>               
+</body>
+</html>

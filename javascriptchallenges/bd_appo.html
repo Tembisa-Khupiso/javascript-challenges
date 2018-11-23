@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2Hearts Hospital</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+    <link rel="stylesheet" type="text/css" href="css/form.css"> 
+</head>
+    <body>
+        <div class="header">
+            <span class="logo"><img src="img/logo2.png" alt="2Hearts Logo"></span>
+            <span class="menu">
+                <ul>
+                <a href="challenges.html"><li>Home</li></a>
+                <a href="bd_appo.html"><li>Business Days Appointments</li></a>
+                <a href="wknd_appo.html"><li>Weekends Appointments</li></a>
+                <a href="#contact"><li>Contact Us</li></a>
+                </ul>
+            </span>
+        </div>
+        <div class="container">
+        <h1>PATIENTS PUT ON THEIR SEATS NUMBERS TO CHECK HOW MANY PEOPLE HAVE BOOKED</h1><br /><br />
+        <form id="form1" action="">
+            <input id="check1" placeholder="Enter a number1" type="number" size="30"><br /><br />
+            <input id="check2" placeholder="Enter a number2" type="number" size="30"><br /><br />
+            <input id="check3" placeholder="Enter a number3" type="number" size="30"><br /><br />
+            <button name="submit" onclick="outputnumber()">Submit</button>
+        </form>
+       
+        </div><br /><br />
+        <script>
+                function outputnumber() {
+                    var numb1 = Number(document.getElementById('check1').value);
+                    var numb2 = Number(document.getElementById('check2').value);
+                    var numb3 = Number(document.getElementById('check3').value);
+                    
+                    if (numb1 > numb2 && numb1 > numb3){
+                    document.getElementById("output").innerHTML = (num1);
+                    }
+                    else if (numb2 > numb1 && numb2 > numb3) {
+                    document.getElementById("output").innerHTML = (numb2);
+                    }
+                    else if (numb3 > numb1 && numb3 > numb1) {
+                    document.getElementById("output").innerHTML = (num3);
+                    }
+                }
+             </script>
+        <hr>
+        <div class="footer">
+                <h3>Contact Form</h3>
+
+                <div class="container1">
+                  <form action="">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+                
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                
+                    <input type="submit" value="Submit">
+                  </form>
+                 
+                </div><br />
+                <p>Written and coded by <a href="https://tembisakupiso" target="_blank">Tembisa Khupiso.</a></p>             
+        </div>
+       
+    </body>
+</html>

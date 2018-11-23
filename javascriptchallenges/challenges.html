@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2Hearts Hospital</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+    <link rel="stylesheet" type="text/css" href="css/form.css"> 
+</head>
+    <body>
+        <div class="header">
+            <span class="logo"><img src="img/logo2.png" alt="2Hearts Logo"></span>
+            <span class="menu">
+                <ul>
+                <a href="challenges.html"><li>Home</li></a>
+                <a href="bd_appo.html"><li>Business Days Appointments</li></a>
+                <a href="wknd_appo.html"><li>Weekends Appointments</li></a>
+                <a href="#contact"><li>Contact Us</li></a>
+            </ul>
+            </span>
+        </div>
+        <div class="container">
+        <h1>WELCOME TO 2HEARTS HOSPITAL</h1>
+        <h2>Our booking system takes two people at the time to save time, if the result are true then you are booked</h2><br /><br />
+        <p id="output"></p><br />
+        <form id="form1" action="challenges.html">
+            <label>Age1:</label><input id="check1" name="age1" placeholder="First Person's Age" type="number" size="30"><br /><br />
+            <label>Age2:</label><input id="check2" name="age2" placeholder="Second Person's Age" type="number" size="30"><br /><br />
+            
+        </form>
+        <button name="submit" onclick="outputname()">Submit</button>
+        </div><br /><br />
+
+        <script>
+                function outputname() {
+                    var age1 = Number(document.getElementById('check1').value);
+                    var age2 = Number(document.getElementById('check2').value);
+                    if (age1 == 65){
+                    document.getElementById("output").innerHTML = "True";
+                    }
+                    else if (age2 == 65) {
+                    document.getElementById("output").innerHTML = "True";
+                    }
+                    else if (+age1 + +age2 == 65) {
+                    document.getElementById("output").innerHTML = "True";
+                    }
+                    else {
+                        document.getElementById("output").innerHTML = "False";
+                    }
+     
+                }
+             </script>
+
+        <hr>
+        <div class="footer">
+                <h3>Contact Form</h3>
+
+                <div class="container1">
+                  <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                      <option value="RSA">RSA</option>
+                    </select>
+                
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                  </form>
+                  <input type="submit" value="Submit">
+                </div><br />
+                <p>Written and coded by <a href="https://tembisakupiso" target="_blank">Tembisa Khupiso.</a></p>              
+        </div>
+       
+    </body>
+</html>
